@@ -56,15 +56,16 @@ gulp.task('copy-img',function(){
 
 //复制mock到dist目录下
 gulp.task('copy-moke',function(){
-	gulp.src('src/img/**/*.*')
+	gulp.src('src/moke/**/*.*')
 		.pipe(gulp.dest('dist/mock'))
 });
+
 gulp.task('copy',['copy-lib','copy-img','copy-moke']);
 
 //编译*.scss文件为*.css
 gulp.task('sass',function(){
 	gulp.src('src/sass/*.scss')
-		.pipe(sass({outPutStyle:'expanded'}))
+		.pipe(sass({outPutStyle:'compressed'}))
 		.pipe(gulp.dest('dist/css/'))
 		.pipe(connect.reload());
 });

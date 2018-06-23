@@ -1,7 +1,7 @@
 require.config({
-	basUrl:'/',
-	path:{
-		jquery:'lib/jquery/jquery-1.12.4.min',
-		load:'js/loadHeaderAndFooter'
+	baseUrl : "/",
+	paths : { // 短名称
+		jquery : "lib/jquery/jquery-1.12.4.min",
+		load : "js/loadHeaderAndFooter"
 	}
-})
+});
