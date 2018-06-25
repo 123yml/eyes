@@ -110,6 +110,7 @@ a{text-decoration:none;}
 		position:absolute;
 		bottom: 0;
 		.h_nav{
+			width: 860px;
 			display:flex;
 			float: left;
 			li{
@@ -119,8 +120,6 @@ a{text-decoration:none;}
 				padding:0 20px;
 				padding-top:13px;
 				a{
-					display: inline-block;
-					height: 30px;
 					font-size:13px;
 					font-weight:bold;
 					color:white;
@@ -164,7 +163,7 @@ a{text-decoration:none;}
 								flex-wrap:wrap;
 								text-align:left;
 								padding:0;
-								padding:14px 8px 14px 9px;
+								padding:14px 5px 14px 8px;
 								height:59px;
 								border-bottom:1px dashed #666666;
 								h4{
@@ -245,15 +244,22 @@ a{text-decoration:none;}
 					border-right:5px solid #000000;
 					border-bottom:5px solid #000000;
 					border-top:5px solid white;
-					/*margin-top:10px;*/
+					margin-top:10px;
 				}
 			}
 		}
 	}
 	.loginAndRegister{
 		float: right;
-		width: 25px;
-		width: 90px;
+		height: 25px;
+		color: white;
+		width: 152px;
+		display: flex;
+		justify-content: space-between;
+		a{
+			color: white;
+
+		}
 	}
 }
 

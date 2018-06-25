@@ -29,9 +29,14 @@ define(['jquery'],function($){
 			$('.women_nav').css({display:'none'});
 			$('.men_nav').css({display:'block'});
 		})
+
 		$.each($('a',$('.h_nav>li')),(index,curr)=>{
 			$(curr).on('mouseenter',function(){
+				$.each($('i',$('.h_nav>li')),(index,curr)=>{	
+					$(curr).css({display:'none'});
+				});			
 				$(this).next().css({display:'inline-block'});
+
 			})
 		})
 	});
