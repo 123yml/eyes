@@ -74,7 +74,7 @@ gulp.task('sass',function(){
 gulp.task('watch',function(){
 	gulp.watch('src/sass/*.scss',['sass']); 
 	gulp.watch('src/**/*.html',['html']);
-
+	gulp.watch('src/js/*.js',['js']);
 });
 
 //定制默认（缺省）任务

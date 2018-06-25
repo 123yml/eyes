@@ -1,5 +1,39 @@
 //加载头部尾部
 define(['jquery'],function($){
-	$('#header').load('/html/include/header.html');
-	// $('#footer').load('/html/include/footer.html');
+	$('#header').load('/html/include/header.html',function(){
+		$('.s_cloth').on('click',function(){
+			$('.s_designer').css({background:'black',color:'white'});
+			$('.s_cloth').css({background:'white',color:'#444444'});
+			$('.txt').val('搜美衣');
+			$('.l_cloth').css({display:'block'});
+			$('.l_designer').css({display:'none'});
+			console.log('搜美衣');
+		});
+		$('.s_designer').on('click',function(){
+			$('.s_designer').css({background:'white',color:'#444444'});
+			$('.s_cloth').css({background:'black',color:'white'})
+			$('.txt').val('搜设计师');
+			$('.l_cloth').css({display:'none'});
+			$('.l_designer').css({display:'block'});
+			console.log('搜设计师');
+		});
+		$('.women').on('click',function(){
+			$('.women').css({color:'#ffd27e'});
+			$('.men').css({color:'white'});
+			$('.women_nav').css({display:'block'});
+			$('.men_nav').css({display:'none'});
+		})
+		$('.men').on('click',function(){
+			$('.women').css({color:'white'});
+			$('.men').css({color:'#ffd27e'});
+			$('.women_nav').css({display:'none'});
+			$('.men_nav').css({display:'block'});
+		})
+		$.each($('a',$('.h_nav>li')),(index,curr)=>{
+			$(curr).on('mouseenter',function(){
+				$(this).next().css({display:'inline-block'});
+			})
+		})
+	});
+	$('#footer').load('/html/include/footer.html');
 });
