@@ -9,6 +9,7 @@ a{text-decoration:none;}
 		width:1084px;
 		margin:0 auto;
 		.top{
+			width:1084px;
 			height:108px;
 			.logo{
 				width:453px;
@@ -91,6 +92,7 @@ a{text-decoration:none;}
 	}
 
 	.mid{
+		width:1084px;
 		height:23px;		
 		width:1084px;
 		display:none;
@@ -104,163 +106,171 @@ a{text-decoration:none;}
 			}
 		}
 	}
-
+	
 	.bottom{
 		height:56px;
 		position:absolute;
+		background:#000000; 
 		bottom: 0;
-		.h_nav{
-			width: 860px;
-			display:flex;
-			float: left;
-			li{
+		.btm_content{
+			width: 1084px;
+			height:56px;
+			margin:0 auto;
+			.h_nav{
+				width: 860px;
 				display:flex;
-				flex-direction:column;
-				align-items:center;
-				padding:0 20px;
-				padding-top:13px;
-				a{
-					font-size:13px;
-					font-weight:bold;
-					color:white;
-				}
-				&:first-child{
-					width:160px;
-					height:56px;
-					background:white;
-					font-size:13px;
-					font-weight:bold;
-					text-align:center;
-					position:relative;
-					&:hover{
+				float: left;
+				li{
+					display:flex;
+					flex-direction:column;
+					align-items:center;
+					padding:0 20px;
+					padding-top:13px;
+					a{
+						font-size:13px;
+						font-weight:bold;
+						color:white;
+					}
+					&:first-child{
+						width:160px;
+						height:56px;
+						background:white;
+						font-size:13px;
+						font-weight:bold;
+						text-align:center;
+						position:relative;
+						&:hover{
+							.nav{
+								display:block;
+							}
+						}
 						.nav{
-							display:block;
-						}
-					}
-					.nav{
-						height:570px;
-						position:absolute;
-						top:56px;
-						display:none;
-						z-index: 999;
-						.cloth{
-							height:69px;
-							padding-top:19px;
-							font-weight:bold;
-							background:#272727;	
-							width:160px;						
-						}						
-						.women{
-							margin-right:13px;
-							color:#ffd27e;
-
-						}
-						.women_nav{
-							width:160px;
-							height:501px;
-							li{
-								flex-direction:row;
-								flex-wrap:wrap;
-								text-align:left;
-								padding:0;
-								padding:14px 5px 14px 8px;
-								height:59px;
-								border-bottom:1px dashed #666666;
-								h4{
-									color:white;
-								}
-								a{
-									font-size:12px;
-									font-weight:normal;
-									color:#aaaaaa;
-									margin-right:2px;
-								}
-								&:nth-of-type(1){
-									height:95px;
-								}
-								&:nth-of-type(2){
-									height:77px;
-								}
-								&:nth-of-type(3){
-									height:77px;
-								}
-								&:nth-of-type(4){
-									height:77px;
-								}
-								&:nth-of-type(2n+1){
-									background:#3b3b3b;
-								}
-								&:nth-of-type(2n){
-									background:#272727;
-								}
-							}
-							
-						}
-						.men_nav{
-							width:160px;
-							height:501px;
+							height:570px;
+							position:absolute;
+							top:56px;
 							display:none;
-							li{
-								flex-direction:row;
-								flex-wrap:wrap;
-								text-align:left;
-								padding:0;
-								padding:14px 8px 14px 9px;
-								height:95px;
-								border-bottom:1px dashed #666666;
-								h4{
-									color:white;
-								}
-								a{
-									font-size:12px;
-									font-weight:normal;
-									color:#aaaaaa;
-									margin-right:2px;
-								}
-								&:nth-of-type(3){
-									height:77px;
-								}
-								&:nth-of-type(4){
-									height:132px;
-								}
-								&:nth-of-type(2n+1){
-									background:#3b3b3b;
-								}
-								&:nth-of-type(2n){
-									background:#272727;
-								}
-							}
-							
-						}
-					}
-					
-				}
+							z-index: 999;
+							.cloth{
+								height:69px;
+								padding-top:19px;
+								font-weight:bold;
+								background:#272727;	
+								width:160px;						
+							}						
+							.women{
+								margin-right:13px;
+								color:#ffd27e;
 
-				i{
-					display:none;
-					width:10px;
-					height:10px;
-					border-left:5px solid #000000 ;
-					border-right:5px solid #000000;
-					border-bottom:5px solid #000000;
-					border-top:5px solid white;
-					margin-top:10px;
+							}
+							.women_nav{
+								width:160px;
+								height:501px;
+								li{
+									flex-direction:row;
+									flex-wrap:wrap;
+									text-align:left;
+									padding:0;
+									padding:14px 5px 14px 8px;
+									height:59px;
+									border-bottom:1px dashed #666666;
+									h4{
+										color:white;
+									}
+									a{
+										font-size:12px;
+										font-weight:normal;
+										color:#aaaaaa;
+										margin-right:2px;
+									}
+									&:nth-of-type(1){
+										height:95px;
+									}
+									&:nth-of-type(2){
+										height:77px;
+									}
+									&:nth-of-type(3){
+										height:77px;
+									}
+									&:nth-of-type(4){
+										height:77px;
+									}
+									&:nth-of-type(2n+1){
+										background:#3b3b3b;
+									}
+									&:nth-of-type(2n){
+										background:#272727;
+									}
+								}
+								
+							}
+							.men_nav{
+								width:160px;
+								height:501px;
+								display:none;
+								li{
+									flex-direction:row;
+									flex-wrap:wrap;
+									text-align:left;
+									padding:0;
+									padding:14px 8px 14px 9px;
+									height:95px;
+									border-bottom:1px dashed #666666;
+									h4{
+										color:white;
+									}
+									a{
+										font-size:12px;
+										font-weight:normal;
+										color:#aaaaaa;
+										margin-right:2px;
+									}
+									&:nth-of-type(3){
+										height:77px;
+									}
+									&:nth-of-type(4){
+										height:132px;
+									}
+									&:nth-of-type(2n+1){
+										background:#3b3b3b;
+									}
+									&:nth-of-type(2n){
+										background:#272727;
+									}
+								}
+								
+							}
+						}
+						
+					}
+
+					i{
+						display:none;
+						width:10px;
+						height:10px;
+						border-left:5px solid #000000 ;
+						border-right:5px solid #000000;
+						border-bottom:5px solid #000000;
+						border-top:5px solid white;
+						margin-top:10px;
+					}
+				}
+			}
+			.loginAndRegister{
+				float: right;
+				height: 25px;
+				color: white;
+				width: 152px;
+				display: flex;
+				justify-content: space-between;
+				margin-top: 15px;
+				a{
+					color: white;
 				}
 			}
 		}
+		
 	}
-	.loginAndRegister{
-		float: right;
-		height: 25px;
-		color: white;
-		width: 152px;
-		display: flex;
-		justify-content: space-between;
-		a{
-			color: white;
-
-		}
-	}
+	
 }
 
 

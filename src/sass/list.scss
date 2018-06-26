@@ -1,0 +1,142 @@
+.upstare{
+	width:1084px;
+	padding-left:165px;
+	margin:0 auto;
+	.top{
+		height:75px;
+		padding-top: 34px;
+		border-bottom: 1px solid #f2f2f2;
+		.left{
+			float: left;
+			padding-left:20px;
+			background: url('/img/list/icon1.png') no-repeat 9px center;
+			a{
+				color:#444444;
+				padding-right:12px;
+			}
+			img{
+				padding-right:12px;
+			}
+		}
+		.right{
+			float: right;
+			ul{
+				border: 1px solid #cccccc;
+				height: 33px;
+				line-height: 33px;
+				width: 221px;
+				li{
+					float: left;
+					padding:0 25px 0 15px;
+					border-left:1px solid #cccccc;
+					background: url(/img/list/icon3.png) no-repeat 42px center;
+		
+					&:first-child{
+						background: url(/img/list/icon3.png) no-repeat 67px center;
+						border: 0;
+					}
+				}
+			}
+		}
+	}
+	.condition{
+		height: 141px;
+		width:925px;
+		margin:20px 0;
+		border-left: 1px solid #cccccc;
+		div{
+			height: 47px;
+			border-top: 1px solid #cccccc;
+			line-height: 47px;
+			h3{
+				font-weight: bold;
+				float: left;
+			}
+			a{
+				color: #444444;
+				margin-right: 18px;
+			}			
+		}
+		.choice{
+			padding-left:38px;
+			background: #f2f2f2;
+		}
+		.price{
+			padding-left: 68px;
+		}
+		.season{
+			padding-left: 68px;
+			border-bottom: 1px solid #cccccc;
+		}
+	}
+
+	.images{
+		width: 680px;
+		height: 2192px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		dl{
+			height: 338px;
+			width: 219px;
+			dt{
+				height: 300px;
+				width:219px;
+				img{
+					width: 100%;
+					height: 100%;
+				}
+			}
+			dd{
+				height: 38px;
+				text-align: center;
+				p{
+					overflow: hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+					a{
+						color: #444444;
+					}
+				}
+				span{
+					i{
+						font-style: normal;
+						margin-left: 26px;
+						color: #04b4ae;
+					}
+				}
+			}
+		} 
+	}
+
+	.pages{
+		height: 120px;
+		ul{
+			display: flex;
+			align-items: center;
+			float: right;
+			li{
+				float: left;
+				height: 32px;
+				width: 34px;
+				border: 1px solid #999999;
+				text-align: center;
+				line-height: 32px;
+				margin-right: 3px;
+				font-weight: bold;
+				&:first-child,&:last-child{
+					height:35px;
+					width: 80px;
+					line-height: 35px;
+					text-align: center;
+					border: 1px solid #cccccc;
+					background: #f2f2f2;
+				}
+				a{
+					color: #444444;
+					display: block;
+				}
+			}
+		}
+	}
+}

@@ -77,14 +77,36 @@ require(['config'],function(){
 		/*list鼠标移入遮罩*/
 		$.each($('dt'),(index,curr)=>{
 			$(curr).on('mouseenter',function(){
-				$('.bg',$(this)).css({display:'block'});			
+				$('.bg',$(this)).show();			
 			})
 		})
 
 		$.each($('dt'),(index,curr)=>{
 			$(curr).on('mouseleave',function(){
-				$('.bg',$(this)).css({display:'none'});		
+				$('.bg',$(this)).hide();	
 			})
+		})
+
+		
+		$(window).scroll(function(e){
+			let scrollHeight = $(window).scrollTop();
+			let showHeight = $('.sign').position();
+			const windowWidth = $(window).width();
+			console.log($('.bottom',$('#header')).position())
+			if(scrollHeight >= showHeight.top){
+				$('.bottom',$('#header')).css({
+					position:'fixed',
+					top:0,
+					left:0,
+					background:'black',
+					zIndex:999,
+					width:windowWidth
+				});
+			}else if(scrollHeight < showHeight.top)
+				$('.bottom',$('#header')).css({
+					position:'absolute',
+					top:131
+				});
 		})
 	});
 });
