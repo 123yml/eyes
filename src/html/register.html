@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册</title>
+	<link rel="stylesheet" href="/css/base.css">
+	<link rel="stylesheet" href="/css/register.css">
+</head>
+<body>
+	<header id="header"></header>
+	<div class="container">
+		<form >
+			<h3>新会员注册</h3>
+			<div class='register_way'>
+				<span>注册方式：</span>
+				<input type="radio" id='way1' name="register_way" checked="checked"><label for='way1'>手机</label>
+				<input type="radio" id='way2' name="register_way"><label for='way2'>电子邮箱</label>
+			</div>	
+			<input type="text" class='txt' name="username" placeholder="请输入手机号">
+			<input type="text" class='txt' name="" placeholder="请输入短信验证码">
+			<input type="button" class='code_btn' value="获取验证码">
+			<div class="sex">
+				<span>你的性别：</span>
+				<input type="radio" id='sex1' name="sex" checked="checked"/><label for='sex1'>男</label>
+				<input type="radio" id='sex2' name="sex"/><label for='sex2'>女</label>
+			</div>
+			<input type="password" class='psd' name="username" placeholder="请输入登录密码">
+			<input type="password" class='psd' name="" placeholder="请再次输入登录密码">
+			<button id='btn'>注册</button>
+			<div class="login">
+				<span>已经有账号？</span>
+				<a href="/html/login.html">请直接登录</a>
+			</div>
+			<div class="other">
+				<img src='/img/login_bg/QQ.png'>
+				<img src='/img/login_bg/icon1.png'>
+				<img src='/img/login_bg/icon2.png'>
+			</div>
+		</form>
+	</div>
+	<footer id="footer"></footer>
+	<script src="/lib/requirejs/require.js" data-main='/js/register'></script>
+</body>
+</html>

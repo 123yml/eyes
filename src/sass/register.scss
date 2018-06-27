@@ -1,42 +1,66 @@
 .container{
 	background: url('/img/login_bg/reg_bg.jpg');
 	form{
-		height: 387px;
+		height: 535px;
 		width: 420px;
 		background: white;
 		position: absolute;
-		top:37%;
+		top:25%;
 		left:33%;
 		border-radius: 5px;
+		/* position: relative; */
 		h3{
-			height: 80px;
+			height: 92px;
 			padding-top: 38px;
 			padding-left: 67px;
 			color: #595757;
 			font-size: 14px;
 		}
-		input{
+		.register_way{
+			height: 29px;
+			padding-left: 25px;
+			width: 420px;
+			span{
+				color: #ff3300;
+			}
+			input{
+				margin-left: 2px;
+				margin-right: 1px
+			}
+			label{				
+				color: #444444;
+			}
+		}
+		.txt{
 			width: 370px;
 			height: 40px;
 			border: 1px solid #dddddd;
 			color: #bbbbbb;
 			margin:0 25px 10px 25px;
 			padding-left: 35px;
-			&:first-of-type{
-				background:url('/img/login_bg/icon3.png') no-repeat 9px 8px;
-			}
-			&:last-of-type{
-				background:url('/img/login_bg/icon4.png') no-repeat 9px 8px;
+			background:url('/img/login_bg/icon3.png') no-repeat 9px 8px;
+			
+		} 
+		.code_btn{
+			position: absolute;
+			width: 102px;
+			height: 34px;
+			background: #3b9c6c;
+			border: 0;
+			color: white;
+			top: 175px;
+			left:290px;
+			border-radius: 3px;
+		}
+		.sex{
+			@extend .register_way;
+			span{
+				color: #bbbbbb;
 			}
 		}
-		.forget{
-			display: block;
-			width: 370px;
-			height: 40px;
-			text-align: right;
-			color: #444444;
-			line-height: 30px;
-			margin-left: 25px;
+		.psd{
+			@extend .txt;
+			background: url('/img/login_bg/icon4.png') no-repeat 9px 8px;
 		}
 		#btn{
 			height: 40px;
@@ -48,7 +72,7 @@
 			margin:0 25px 10px 25px;
 			border: 0;
 		}
-		.register{
+		.login{
 			width:370px;
 			margin:0 25px 0 25px;
 			text-align: right;

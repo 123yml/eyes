@@ -9,9 +9,10 @@ require(['config'],function(){
 						$('.context').html(html);
 					}
 				})
-			})
+			});
 			$(function(){
 				//放大镜
+				console.log($('.zoom_img',$('.context')))
 				$('.zoom_img',$('.context')).elevateZoom({
 					gallery:'gallery',
 					cursor : 'pointer',
@@ -74,7 +75,7 @@ require(['config'],function(){
 						})
 					}
 				})
-			})
+			});
 			
 			//从url上找id
 			function findId(url){
