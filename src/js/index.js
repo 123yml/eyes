@@ -1,6 +1,11 @@
 require(['config'],function(){
-	require(['jquery','load'],function($){
-
+	require(['jquery','template','load'],function($,template){
+		$.getJSON("/mock/list.json",function(data){
+			const html_hot = template('list_template',{list:data.res_body.list});
+			$('.hot_list').html(html_hot);
+			const html_discount = template('discount_template',{list:data.res_body.list});
+			$('.discount_list').html(html_discount);
+		})
 		/*轮播图*/
 		let lis = $('li'),
 			len = lis.length;
@@ -88,11 +93,10 @@ require(['config'],function(){
 		})
 
 		
-		$(window).scroll(function(e){
+		$(window).scroll(function(){
 			let scrollHeight = $(window).scrollTop();
 			let showHeight = $('.sign').position();
 			const windowWidth = $(window).width();
-			console.log($('.bottom',$('#header')).position())
 			if(scrollHeight >= showHeight.top){
 				$('.bottom',$('#header')).css({
 					position:'fixed',

@@ -48,132 +48,30 @@
 			<a href="/html/list.html"></a>
 		</div>
 	</div>
-	
+	<script type="text/html" id="list_template">
+		{{each list product}}
+		<dl>
+			<dt>
+				<a href='/html/detail.html' title="{{product.desc}}">
+					<img src='{{product.img}}' title="{{product.desc}}">
+					<span class="bg"></span>
+				</a>					
+			</dt>
+			<dd>
+				<p>
+					<a href='/html/detail.html'>{{product.desc}}</a>
+				</p>
+				<span>{{product.price}}<i>E0.16011</i></span>
+			</dd>
+		</dl>
+		{{/each}}}
+	</script>
 	<!-- 人气单品 -->
 	<div class="hot">
 		<h3><a href="/html/list.html">人气单品</a></h3>
 		<div class="hot_list">
-			<dl>
-				<dt>
-					<a href='/html/detail.html' title="CHEN原创设计2018春夏新款圆领修身短袖碎花拼接百搭T恤">
-						<img src='/img/index/hot1.png' title="CHEN原创设计2018春夏新款圆领修身短袖碎花拼接百搭T恤">
-						<span class="bg"></span>
-					</a>					
-				</dt>
-				<dd>
-					<p>
-						<a href='/html/detail.html'>DEL CHEN原创设计2018春夏新款圆领修身短袖碎花拼接百搭T恤</a>
-					</p>
-					<span>￥449.10<i>E0.16011</i></span>
-				</dd>
-			</dl>
-			<dl>
-				<dt>
-					<a href='/html/detail.html' title="香云纱正反两穿外套 / 时尚混搭外套--两翻书">
-						<img src='/img/index/hot2.png' title="香云纱正反两穿外套 / 时尚混搭外套--两翻书">
-						<span class="bg"></span>
-					</a>
-					
-				</dt>
-				<dd>
-					<p>
-						<a href='/html/detail.html'>DEL 香云纱正反两穿外套 / 时尚混搭外套--两翻书</a>
-					</p>
-					<span>￥449.10<i>E0.16011</i></span>
-				</dd>
-			</dl>
-			<dl>
-				<dt>
-					<a href='/html/detail.html' title="沐艺制衣 设计师 透气拼接条纹撞色掉肩宽松男式短袖T恤  ">
-						<img src='/img/index/hot3.png' title="沐艺制衣 设计师 透气拼接条纹撞色掉肩宽松男式短袖T恤  ">
-						<span class="bg"></span>
-					</a>
-					
-				</dt>
-				<dd>
-					<p>
-						<a href='/html/detail.html'>DEL 沐艺制衣 设计师 透气拼接条纹撞色掉肩宽松男式短袖T恤  </a>
-					</p>
-					<span>￥449.10<i>E0.16011</i></span>
-				</dd>
-			</dl>
-			<dl>
-				<dt>
-					<a href='/html/detail.html' title="安妮陈女装纯色圆领短袖T恤 ">
-						<img src='/img/index/hot4.png' title="安妮陈女装纯色圆领短袖T恤 ">
-						<span class="bg"></span>
-					</a>
-					
-				</dt>
-				<dd>
-					<p>
-						<a href='/html/detail.html'>DEL 安妮陈女装纯色圆领短袖T恤  </a>	
-					</p>
-					<span>￥449.10<i>E0.16011</i></span>
-				</dd>
-			</dl>
-			<dl>
-				<dt>
-					<a href='/html/detail.html' title="垂感假两件复式套头t恤  ">
-						<img src='/img/index/hot5.png' title="垂感假两件复式套头t恤  ">
-						<span class="bg"></span>
-					</a>
-					
-				</dt>
-				<dd>
-					<p>
-						<a href='/html/detail.html'>DEL 垂感假两件复式套头t恤  </a>
-					</p>
-					<span>￥449.10<i>E0.16011</i></span>
-				</dd>
-			</dl>
-			<dl>
-				<dt>
-					<a href='/html/detail.html' title="小葱良裁优选 基础百搭高腰破洞裤 宽松牛仔裤">
-						<img src='/img/index/hot6.png' title="小葱良裁优选 基础百搭高腰破洞裤 宽松牛仔裤">
-						<span class="bg"></span>
-					</a>
-					
-				</dt>
-				<dd>
-					<p>
-						<a href='/html/detail.html'>DEL 小葱良裁优选 基础百搭高腰破洞裤 宽松牛仔裤</a>
-					</p>
-					<span>￥449.10<i>E0.16011</i></span>
-				</dd>
-			</dl>
-			<dl>
-				<dt>
-					<a href='/html/detail.html' title="小葱良裁优选 基础百搭高腰破洞裤 宽松牛仔裤">
-						<img src='/img/index/hot7.png' title="小葱良裁优选 基础百搭高腰破洞裤 宽松牛仔裤">
-						<span class="bg"></span>
-					</a>
-					
-				</dt>
-				<dd>
-					<p>
-						<a href='/html/detail.html'>DEL 小葱良裁优选 基础百搭高腰破洞裤 宽松牛仔裤</a>
-						
-					</p>
-					<span>￥449.10<i>E0.16011</i></span>
-				</dd>
-			</dl>
-			<dl>
-				<dt>
-					<a href='/html/detail.html' title="DEL CHEN原创设计2018春夏新款短袖直筒圆领纯棉夏日风上衣 ">
-						<img src='/img/index/hot8.png' title="DEL CHEN原创设计2018春夏新款短袖直筒圆领纯棉夏日风上衣 ">
-						<span class="bg"></span>
-					</a>
-					
-				</dt>
-				<dd>
-					<p>
-						<a href='/html/detail.html'>DEL DEL CHEN原创设计2018春夏新款短袖直筒圆领纯棉夏日风上衣 </a>
-						<span class="bg"></span>
-					</p>
-					<span>￥449.10<i>E0.16011</i></span>
-				</dd>
-			</dl>			
+			
+			
 		</div>
 		<div class="more">
 			<a href="/html/list.html"></a>
@@ -184,127 +82,7 @@
 	<div class="new">
 		<h3><a href="/html/list.html">最新上架</a></h3>
 		<div class="hot_list">
-			<dl>
-				<dt>
-					<a href='/html/detail.html' title="CHEN原创设计2018春夏新款圆领修身短袖碎花拼接百搭T恤">
-						<img src='/img/index/new1.png' title="CHEN原创设计2018春夏新款圆领修身短袖碎花拼接百搭T恤">
-						<span class="bg"></span>
-					</a>					
-				</dt>
-				<dd>
-					<p>
-						<a href='/html/detail.html'>DEL CHEN原创设计2018春夏新款圆领修身短袖碎花拼接百搭T恤</a>
-					</p>
-					<span>￥449.10<i>E0.16011</i></span>
-				</dd>
-			</dl>
-			<dl>
-				<dt>
-					<a href='/html/detail.html' title="香云纱正反两穿外套 / 时尚混搭外套--两翻书">
-						<img src='/img/index/hot3.png' title="香云纱正反两穿外套 / 时尚混搭外套--两翻书">
-						<span class="bg"></span>
-					</a>
-					
-				</dt>
-				<dd>
-					<p>
-						<a href='/html/detail.html'>DEL 香云纱正反两穿外套 / 时尚混搭外套--两翻书</a>
-					</p>
-					<span>￥449.10<i>E0.16011</i></span>
-				</dd>
-			</dl>
-			<dl>
-				<dt>
-					<a href='/html/detail.html' title="沐艺制衣 设计师 透气拼接条纹撞色掉肩宽松男式短袖T恤  ">
-						<img src='/img/index/new2.png' title="沐艺制衣 设计师 透气拼接条纹撞色掉肩宽松男式短袖T恤  ">
-						<span class="bg"></span>
-					</a>
-					
-				</dt>
-				<dd>
-					<p>
-						<a href='/html/detail.html'>DEL 沐艺制衣 设计师 透气拼接条纹撞色掉肩宽松男式短袖T恤  </a>
-					</p>
-					<span>￥449.10<i>E0.16011</i></span>
-				</dd>
-			</dl>
-			<dl>
-				<dt>
-					<a href='/html/detail.html' title="安妮陈女装纯色圆领短袖T恤 ">
-						<img src='/img/index/new3.png' title="安妮陈女装纯色圆领短袖T恤 ">
-						<span class="bg"></span>
-					</a>
-					
-				</dt>
-				<dd>
-					<p>
-						<a href='/html/detail.html'>DEL 安妮陈女装纯色圆领短袖T恤  </a>	
-					</p>
-					<span>￥449.10<i>E0.16011</i></span>
-				</dd>
-			</dl>
-			<dl>
-				<dt>
-					<a href='/html/detail.html' title="垂感假两件复式套头t恤  ">
-						<img src='/img/index/new4.png' title="垂感假两件复式套头t恤  ">
-						<span class="bg"></span>
-					</a>
-					
-				</dt>
-				<dd>
-					<p>
-						<a href='/html/detail.html'>DEL 垂感假两件复式套头t恤  </a>
-					</p>
-					<span>￥449.10<i>E0.16011</i></span>
-				</dd>
-			</dl>
-			<dl>
-				<dt>
-					<a href='/html/detail.html' title="小葱良裁优选 基础百搭高腰破洞裤 宽松牛仔裤">
-						<img src='/img/index/new5.png' title="小葱良裁优选 基础百搭高腰破洞裤 宽松牛仔裤">
-						<span class="bg"></span>
-					</a>
-					
-				</dt>
-				<dd>
-					<p>
-						<a href='/html/detail.html'>DEL 小葱良裁优选 基础百搭高腰破洞裤 宽松牛仔裤</a>
-					</p>
-					<span>￥449.10<i>E0.16011</i></span>
-				</dd>
-			</dl>
-			<dl>
-				<dt>
-					<a href='/html/detail.html' title="小葱良裁优选 基础百搭高腰破洞裤 宽松牛仔裤">
-						<img src='/img/index/new6.png' title="小葱良裁优选 基础百搭高腰破洞裤 宽松牛仔裤">
-						<span class="bg"></span>
-					</a>
-					
-				</dt>
-				<dd>
-					<p>
-						<a href='/html/detail.html'>DEL 小葱良裁优选 基础百搭高腰破洞裤 宽松牛仔裤</a>
-						
-					</p>
-					<span>￥449.10<i>E0.16011</i></span>
-				</dd>
-			</dl>
-			<dl>
-				<dt>
-					<a href='/html/detail.html' title="DEL CHEN原创设计2018春夏新款短袖直筒圆领纯棉夏日风上衣 ">
-						<img src='/img/index/new7.png' title="DEL CHEN原创设计2018春夏新款短袖直筒圆领纯棉夏日风上衣 ">
-						<span class="bg"></span>
-					</a>
-					
-				</dt>
-				<dd>
-					<p>
-						<a href='/html/detail.html'>DEL DEL CHEN原创设计2018春夏新款短袖直筒圆领纯棉夏日风上衣 </a>
-						<span class="bg"></span>
-					</p>
-					<span>￥449.10<i>E0.16011</i></span>
-				</dd>
-			</dl>			
+			
 		</div>
 		<div class="more">
 			<a href="/html/list.html"></a>
@@ -316,127 +94,7 @@
 	<div class="new_women">
 		<h3><a href="/html/list.html">潮流女装</a></h3>
 		<div class="hot_list">
-			<dl>
-				<dt>
-					<a href='/html/detail.html' title="CHEN原创设计2018春夏新款圆领修身短袖碎花拼接百搭T恤">
-						<img src='/img/index/new_women1.jpg' title="CHEN原创设计2018春夏新款圆领修身短袖碎花拼接百搭T恤">
-						<span class="bg"></span>
-					</a>					
-				</dt>
-				<dd>
-					<p>
-						<a href='/html/detail.html'>DEL CHEN原创设计2018春夏新款圆领修身短袖碎花拼接百搭T恤</a>
-					</p>
-					<span>￥449.10<i>E0.16011</i></span>
-				</dd>
-			</dl>
-			<dl>
-				<dt>
-					<a href='/html/detail.html' title="香云纱正反两穿外套 / 时尚混搭外套--两翻书">
-						<img src='/img/index/new_women2.jpg' title="香云纱正反两穿外套 / 时尚混搭外套--两翻书">
-						<span class="bg"></span>
-					</a>
-					
-				</dt>
-				<dd>
-					<p>
-						<a href='/html/detail.html'>DEL 香云纱正反两穿外套 / 时尚混搭外套--两翻书</a>
-					</p>
-					<span>￥449.10<i>E0.16011</i></span>
-				</dd>
-			</dl>
-			<dl>
-				<dt>
-					<a href='/html/detail.html' title="沐艺制衣 设计师 透气拼接条纹撞色掉肩宽松男式短袖T恤  ">
-						<img src='/img/index/new_women3.jpg' title="沐艺制衣 设计师 透气拼接条纹撞色掉肩宽松男式短袖T恤  ">
-						<span class="bg"></span>
-					</a>
-					
-				</dt>
-				<dd>
-					<p>
-						<a href='/html/detail.html'>DEL 沐艺制衣 设计师 透气拼接条纹撞色掉肩宽松男式短袖T恤  </a>
-					</p>
-					<span>￥449.10<i>E0.16011</i></span>
-				</dd>
-			</dl>
-			<dl>
-				<dt>
-					<a href='/html/detail.html' title="安妮陈女装纯色圆领短袖T恤 ">
-						<img src='/img/index/new_women4.jpg' title="安妮陈女装纯色圆领短袖T恤 ">
-						<span class="bg"></span>
-					</a>
-					
-				</dt>
-				<dd>
-					<p>
-						<a href='/html/detail.html'>DEL 安妮陈女装纯色圆领短袖T恤  </a>	
-					</p>
-					<span>￥449.10<i>E0.16011</i></span>
-				</dd>
-			</dl>
-			<dl>
-				<dt>
-					<a href='/html/detail.html' title="垂感假两件复式套头t恤  ">
-						<img src='/img/index/new_women5.jpg' title="垂感假两件复式套头t恤  ">
-						<span class="bg"></span>
-					</a>
-					
-				</dt>
-				<dd>
-					<p>
-						<a href='/html/detail.html'>DEL 垂感假两件复式套头t恤  </a>
-					</p>
-					<span>￥449.10<i>E0.16011</i></span>
-				</dd>
-			</dl>
-			<dl>
-				<dt>
-					<a href='/html/detail.html' title="小葱良裁优选 基础百搭高腰破洞裤 宽松牛仔裤">
-						<img src='/img/index/new_women6.jpg' title="小葱良裁优选 基础百搭高腰破洞裤 宽松牛仔裤">
-						<span class="bg"></span>
-					</a>
-					
-				</dt>
-				<dd>
-					<p>
-						<a href='/html/detail.html'>DEL 小葱良裁优选 基础百搭高腰破洞裤 宽松牛仔裤</a>
-					</p>
-					<span>￥449.10<i>E0.16011</i></span>
-				</dd>
-			</dl>
-			<dl>
-				<dt>
-					<a href='/html/detail.html' title="小葱良裁优选 基础百搭高腰破洞裤 宽松牛仔裤">
-						<img src='/img/index/new_women7.jpg' title="小葱良裁优选 基础百搭高腰破洞裤 宽松牛仔裤">
-						<span class="bg"></span>
-					</a>
-					
-				</dt>
-				<dd>
-					<p>
-						<a href='/html/detail.html'>DEL 小葱良裁优选 基础百搭高腰破洞裤 宽松牛仔裤</a>
-						
-					</p>
-					<span>￥449.10<i>E0.16011</i></span>
-				</dd>
-			</dl>
-			<dl>
-				<dt>
-					<a href='/html/detail.html' title="DEL CHEN原创设计2018春夏新款短袖直筒圆领纯棉夏日风上衣 ">
-						<img src='/img/index/new_women8.jpg' title="DEL CHEN原创设计2018春夏新款短袖直筒圆领纯棉夏日风上衣 ">
-						<span class="bg"></span>
-					</a>
-					
-				</dt>
-				<dd>
-					<p>
-						<a href='/html/detail.html'>DEL DEL CHEN原创设计2018春夏新款短袖直筒圆领纯棉夏日风上衣 </a>
-						<span class="bg"></span>
-					</p>
-					<span>￥449.10<i>E0.16011</i></span>
-				</dd>
-			</dl>			
+			
 		</div>
 		<div class="more">
 			<a href="/html/list.html"></a>
@@ -447,258 +105,36 @@
 	<div class="new_men">
 		<h3><a href="/html/list.html">精品男装</a></h3>
 		<div class="hot_list">
-			<dl>
-				<dt>
-					<a href='/html/detail.html' title="CHEN原创设计2018春夏新款圆领修身短袖碎花拼接百搭T恤">
-						<img src='/img/index/new_men1.jpg' title="CHEN原创设计2018春夏新款圆领修身短袖碎花拼接百搭T恤">
-						<span class="bg"></span>
-					</a>					
-				</dt>
-				<dd>
-					<p>
-						<a href='/html/detail.html'>DEL CHEN原创设计2018春夏新款圆领修身短袖碎花拼接百搭T恤</a>
-					</p>
-					<span>￥449.10<i>E0.16011</i></span>
-				</dd>
-			</dl>
-			<dl>
-				<dt>
-					<a href='/html/detail.html' title="香云纱正反两穿外套 / 时尚混搭外套--两翻书">
-						<img src='/img/index/new_men2.jpg' title="香云纱正反两穿外套 / 时尚混搭外套--两翻书">
-						<span class="bg"></span>
-					</a>
-					
-				</dt>
-				<dd>
-					<p>
-						<a href='/html/detail.html'>DEL 香云纱正反两穿外套 / 时尚混搭外套--两翻书</a>
-					</p>
-					<span>￥449.10<i>E0.16011</i></span>
-				</dd>
-			</dl>
-			<dl>
-				<dt>
-					<a href='/html/detail.html' title="沐艺制衣 设计师 透气拼接条纹撞色掉肩宽松男式短袖T恤  ">
-						<img src='/img/index/new_men3.jpg' title="沐艺制衣 设计师 透气拼接条纹撞色掉肩宽松男式短袖T恤  ">
-						<span class="bg"></span>
-					</a>
-					
-				</dt>
-				<dd>
-					<p>
-						<a href='/html/detail.html'>DEL 沐艺制衣 设计师 透气拼接条纹撞色掉肩宽松男式短袖T恤  </a>
-					</p>
-					<span>￥449.10<i>E0.16011</i></span>
-				</dd>
-			</dl>
-			<dl>
-				<dt>
-					<a href='/html/detail.html' title="安妮陈女装纯色圆领短袖T恤 ">
-						<img src='/img/index/new_men4.jpg' title="安妮陈女装纯色圆领短袖T恤 ">
-						<span class="bg"></span>
-					</a>
-					
-				</dt>
-				<dd>
-					<p>
-						<a href='/html/detail.html'>DEL 安妮陈女装纯色圆领短袖T恤  </a>	
-					</p>
-					<span>￥449.10<i>E0.16011</i></span>
-				</dd>
-			</dl>
-			<dl>
-				<dt>
-					<a href='/html/detail.html' title="垂感假两件复式套头t恤  ">
-						<img src='/img/index/new_men5.jpg' title="垂感假两件复式套头t恤  ">
-						<span class="bg"></span>
-					</a>
-					
-				</dt>
-				<dd>
-					<p>
-						<a href='/html/detail.html'>DEL 垂感假两件复式套头t恤  </a>
-					</p>
-					<span>￥449.10<i>E0.16011</i></span>
-				</dd>
-			</dl>
-			<dl>
-				<dt>
-					<a href='/html/detail.html' title="小葱良裁优选 基础百搭高腰破洞裤 宽松牛仔裤">
-						<img src='/img/index/new_men6.jpg' title="小葱良裁优选 基础百搭高腰破洞裤 宽松牛仔裤">
-						<span class="bg"></span>
-					</a>
-					
-				</dt>
-				<dd>
-					<p>
-						<a href='/html/detail.html'>DEL 小葱良裁优选 基础百搭高腰破洞裤 宽松牛仔裤</a>
-					</p>
-					<span>￥449.10<i>E0.16011</i></span>
-				</dd>
-			</dl>
-			<dl>
-				<dt>
-					<a href='/html/detail.html' title="小葱良裁优选 基础百搭高腰破洞裤 宽松牛仔裤">
-						<img src='/img/index/new_men7.jpg' title="小葱良裁优选 基础百搭高腰破洞裤 宽松牛仔裤">
-						<span class="bg"></span>
-					</a>
-					
-				</dt>
-				<dd>
-					<p>
-						<a href='/html/detail.html'>DEL 小葱良裁优选 基础百搭高腰破洞裤 宽松牛仔裤</a>
-						
-					</p>
-					<span>￥449.10<i>E0.16011</i></span>
-				</dd>
-			</dl>
-			<dl>
-				<dt>
-					<a href='/html/detail.html' title="DEL CHEN原创设计2018春夏新款短袖直筒圆领纯棉夏日风上衣 ">
-						<img src='/img/index/new_men9.jpg' title="DEL CHEN原创设计2018春夏新款短袖直筒圆领纯棉夏日风上衣 ">
-						<span class="bg"></span>
-					</a>
-					
-				</dt>
-				<dd>
-					<p>
-						<a href='/html/detail.html'>DEL DEL CHEN原创设计2018春夏新款短袖直筒圆领纯棉夏日风上衣 </a>
-						<span class="bg"></span>
-					</p>
-					<span>￥449.10<i>E0.16011</i></span>
-				</dd>
-			</dl>			
+			
 		</div>
 		<div class="more">
 			<a href="/html/list.html"></a>
 		</div>
 	</div>
 
+	<script type="text/html" id="discount_template">
+		{{each list product}}
+		<dl>
+			<dt>
+				<a href='/html/detail.html' title="{{product.desc}}">
+					<img src='{{product.img}}' title="{{product.desc}}">
+					<span class="bg"></span>
+				</a>					
+			</dt>
+			<dd>
+				<p>
+					<a href='/html/detail.html'>{{product.desc}}</a>
+				</p>
+				<span>{{product.price}}</span><i>{{product.type}}</i><em>{{product.oldPrice}}</em>
+			</dd>
+		</dl>
+		{{/each}}}
+	</script>
 	<!-- 惊喜折扣 -->
 	<div class="discount">
 		<h3><a href="/html/list.html">惊喜折扣</a></h3>
-		<div class="hot_list">
-			<dl>
-				<dt>
-					<a href='/html/detail.html' title="CHEN原创设计2018春夏新款圆领修身短袖碎花拼接百搭T恤">
-						<img src='/img/index/discount1.jpg' title="CHEN原创设计2018春夏新款圆领修身短袖碎花拼接百搭T恤">
-						<span class="bg"></span>
-					</a>					
-				</dt>
-				<dd>
-					<p>
-						<a href='/html/detail.html'>DEL CHEN原创设计2018春夏新款圆领修身短袖碎花拼接百搭T恤</a>
-					</p>
-					<span>￥449.10</span><i>E0.16011</i><em>￥2526.12</em>
-				</dd>
-			</dl>
-			<dl>
-				<dt>
-					<a href='/html/detail.html' title="香云纱正反两穿外套 / 时尚混搭外套--两翻书">
-						<img src='/img/index/discount2.jpg' title="香云纱正反两穿外套 / 时尚混搭外套--两翻书">
-						<span class="bg"></span>
-					</a>
-					
-				</dt>
-				<dd>
-					<p>
-						<a href='/html/detail.html'>DEL 香云纱正反两穿外套 / 时尚混搭外套--两翻书</a>
-					</p>
-					<span>￥449.10</span><i>E0.16011</i><em>￥2526.12</em>
-				</dd>
-			</dl>
-			<dl>
-				<dt>
-					<a href='/html/detail.html' title="沐艺制衣 设计师 透气拼接条纹撞色掉肩宽松男式短袖T恤  ">
-						<img src='/img/index/discount3.jpg' title="沐艺制衣 设计师 透气拼接条纹撞色掉肩宽松男式短袖T恤  ">
-						<span class="bg"></span>
-					</a>
-					
-				</dt>
-				<dd>
-					<p>
-						<a href='/html/detail.html'>DEL 沐艺制衣 设计师 透气拼接条纹撞色掉肩宽松男式短袖T恤  </a>
-					</p>
-					<span>￥449.10</span><i>E0.16011</i><em>￥2526.12</em>
-				</dd>
-			</dl>
-			<dl>
-				<dt>
-					<a href='/html/detail.html' title="安妮陈女装纯色圆领短袖T恤 ">
-						<img src='/img/index/discount4.jpg' title="安妮陈女装纯色圆领短袖T恤 ">
-						<span class="bg"></span>
-					</a>
-					
-				</dt>
-				<dd>
-					<p>
-						<a href='/html/detail.html'>DEL 安妮陈女装纯色圆领短袖T恤  </a>	
-					</p>
-					<span>￥449.10</span><i>E0.16011</i><em>￥2526.12</em>
-				</dd>
-			</dl>
-			<dl>
-				<dt>
-					<a href='/html/detail.html' title="垂感假两件复式套头t恤  ">
-						<img src='/img/index/discount5.jpg' title="垂感假两件复式套头t恤  ">
-						<span class="bg"></span>
-					</a>
-					
-				</dt>
-				<dd>
-					<p>
-						<a href='/html/detail.html'>DEL 垂感假两件复式套头t恤  </a>
-					</p>
-					<span>￥449.10</span><i>E0.16011</i><em>￥2526.12</em>
-				</dd>
-			</dl>
-			<dl>
-				<dt>
-					<a href='/html/detail.html' title="小葱良裁优选 基础百搭高腰破洞裤 宽松牛仔裤">
-						<img src='/img/index/discount6.jpg' title="小葱良裁优选 基础百搭高腰破洞裤 宽松牛仔裤">
-						<span class="bg"></span>
-					</a>
-					
-				</dt>
-				<dd>
-					<p>
-						<a href='/html/detail.html'>DEL 小葱良裁优选 基础百搭高腰破洞裤 宽松牛仔裤</a>
-					</p>
-					<span>￥449.10</span><i>E0.16011</i><em>￥2526.12</em>
-				</dd>
-			</dl>
-			<dl>
-				<dt>
-					<a href='/html/detail.html' title="小葱良裁优选 基础百搭高腰破洞裤 宽松牛仔裤">
-						<img src='/img/index/discount7.jpg' title="小葱良裁优选 基础百搭高腰破洞裤 宽松牛仔裤">
-						<span class="bg"></span>
-					</a>
-					
-				</dt>
-				<dd>
-					<p>
-						<a href='/html/detail.html'>DEL 小葱良裁优选 基础百搭高腰破洞裤 宽松牛仔裤</a>
-						
-					</p>
-					<span>￥1312.10</span><i>E0.16011</i><em>￥2526.12</em>
-				</dd>
-			</dl>
-			<dl>
-				<dt>
-					<a href='/html/detail.html' title="DEL CHEN原创设计2018春夏新款短袖直筒圆领纯棉夏日风上衣 ">
-						<img src='/img/index/discount8.jpg' title="DEL CHEN原创设计2018春夏新款短袖直筒圆领纯棉夏日风上衣 ">
-						<span class="bg"></span>
-					</a>
-					
-				</dt>
-				<dd>
-					<p>
-						<a href='/html/detail.html'>DEL DEL CHEN原创设计2018春夏新款短袖直筒圆领纯棉夏日风上衣 </a>
-						<span class="bg"></span>
-					</p>
-					<span>￥449.10</span><i>E0.16011</i><em>￥2526.12</em>
-				</dd>
-			</dl>			
+		<div class="discount_list">
+			
 		</div>
 		<div class="more">
 			<a href="/html/list.html"></a>

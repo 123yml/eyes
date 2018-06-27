@@ -29,10 +29,10 @@
 					float: left;
 					padding:0 25px 0 15px;
 					border-left:1px solid #cccccc;
-					background: url(/img/list/icon3.png) no-repeat 42px center;
+					background: url('/img/list/icon3.png') no-repeat 42px center;
 		
 					&:first-child{
-						background: url(/img/list/icon3.png) no-repeat 67px center;
+						background: url('/img/list/icon3.png') no-repeat 67px center;
 						border: 0;
 					}
 				}
@@ -71,33 +71,39 @@
 	}
 
 	.images{
-		width: 680px;
-		height: 2192px;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
+		width: 690px;
+		overflow: hidden;
 		dl{
+			float: left;
 			height: 338px;
 			width: 219px;
+			margin-right: 10px;
+			margin-bottom: 32px;
 			dt{
 				height: 300px;
 				width:219px;
-				img{
-					width: 100%;
-					height: 100%;
+				a{
+					display: block;
+					height: 300px;
+					width:219px;
+					img{
+						width: 100%;
+						height: 100%;
+					}
 				}
+				
 			}
 			dd{
 				height: 38px;
 				text-align: center;
-				p{
+				a{
+					display: block;
 					overflow: hidden;
 					white-space: nowrap;
 					text-overflow: ellipsis;
-					a{
-						color: #444444;
-					}
+					color: #444444;
 				}
+				
 				span{
 					i{
 						font-style: normal;

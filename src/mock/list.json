@@ -1,0 +1,16 @@
+{
+	"res_code":"",
+	"res_message":"",
+	"res_body":{
+		"list":[
+			{"id":0,"img":"/img/list/a1.jpg","price":"￥3890.00","oldPrice":"￥5240.00","desc":"廓形风衣 ","type":"E0.09837"},
+			{"id":1,"img":"/img/list/d1.jpg","price":"￥1090.00","oldPrice":"￥1888.00","desc":"女士织带半裙","type":"E0.09837"},
+			{"id":2,"img":"/img/list/w1.jpg","price":"￥2290.00","oldPrice":"￥3668.00","desc":"独立设计师LIYIHAN 2018 SS条纹拼接牛仔短裙 ","type":"E0.09837"},
+			{"id":3,"img":"/img/list/f1.jpg","price":"￥890.00","oldPrice":"￥1400.00","desc":"PISN×GOODLOOKSCLUB合作款系列限量复古百搭后松紧腰九分阔腿裤  ","type":"E0.09837"},
+			{"id":4,"img":"/img/list/q1.jpg","price":"￥690.00","oldPrice":"￥1235.00","desc":"ourhour 水洗牛仔系带抽绳连衣裙","type":"E0.09837"},
+			{"id":5,"img":"/img/list/s1.jpg","price":"￥1590.00","oldPrice":"￥2669.00","desc":"Maison Mai 黑色双面针织面料侧开衩时尚运动长裤","type":"E0.09837"},
+			{"id":6,"img":"/img/list/m1.jpg","price":"￥2090.00","oldPrice":"￥3858.00","desc":"LeoKong 款条纹织带装饰阔腿裤","type":"E0.09837"},
+			{"id":7,"img":"/img/list/t1.jpg","price":"￥1190.00","oldPrice":"￥1999.00","desc":"【木境·格】圆领袖子采用扳网格装饰条开衫","type":"E0.09837"}
+		]
+	}
+}

@@ -173,20 +173,65 @@ h3{
 	@extend .hot;
 }
 .discount{
-	@extend .hot;
-	dl{
-		dd{
-			i{
-				margin-left: 8px;
-				font-style: normal;
-				color: #04b4ae;
+	height: 888px;
+	width: 1074px;
+	margin:0 auto;
+	.discount_list{
+		height: 732px;
+		padding:0 70px 0 30px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		dl{
+			height: 350px;
+			width: 226px;
+			dt{
+				height: 310px;
+				width: 226px;
+				position: relative;
+				a{
+					img{
+						height: 310px;
+						width: 226px;
+					}
+				}
+				
+				.bg{
+					position: absolute;
+					height: 310px;
+					width: 226px;
+					background: black;
+					opacity: 0.2;
+					top: 0;
+					display: none;
+					z-index: 1;
+				}
 			}
-			em{
-				font-style: normal;
-				text-decoration: line-through;
-				margin-left: 8px;
-			}	
+			dd{
+				height: 40px;
+				line-height: 21px; 
+				color: #444444;
+				text-align: center;
+				p{
+					overflow: hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+					a{
+						color: #444444;
+					}
+				}
+				i{
+					margin-left: 8px;
+					font-style: normal;
+					color: #04b4ae;
+				}
+				em{
+					font-style: normal;
+					text-decoration: line-through;
+					margin-left: 8px;
+				}	
 			
+			}
 		}
 	}
 }

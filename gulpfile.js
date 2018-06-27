@@ -56,7 +56,7 @@ gulp.task('copy-img',function(){
 
 //复制mock到dist目录下
 gulp.task('copy-moke',function(){
-	gulp.src('src/moke/**/*.*')
+	gulp.src('src/mock/**/*.*')
 		.pipe(gulp.dest('dist/mock'))
 });
 
