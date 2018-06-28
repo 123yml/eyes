@@ -6,20 +6,26 @@ require(['config'],function(){
 			const html_discount = template('discount_template',{list:data.res_body.list});
 			$('.discount_list').html(html_discount);
 		})
+
 		/*轮播图*/
 		let lis = $('li'),
-			len = lis.length;
-		const liWidth = lis[0].offsetWidth;
-		let currentIndex = 1,
-			nextIndex = 2,
-			html= '';
+			len = lis.length,
+			liWidth=lis[0].offsetWidth;
+		let html = '';
 		for(let i = 0; i < len; i++){
 			html += `<span ${i===0?"class='current'":''}>${i+1}</span>`;
 		}
 		$('#pointer').html(html);
+		/*$('#pointer').on('mouseenter','span',function(){
+			$('#images').animate({left:-liWidth*($("#pointer>span").index(this)+1)},"slow");
+		})*/
+
+		let currentIndex = 1,
+			nextIndex = 2,
+		
 
 		//克隆第一个和最后一个
-		let first = lis[0].cloneNode(true),
+		    first = lis[0].cloneNode(true),
 			last = lis[len-1].cloneNode(true);
 		$("#images").append(first);
 		$("#images").prepend(last);

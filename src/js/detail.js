@@ -1,28 +1,55 @@
 require(['config'],function(){
-	require(['jquery','template','load','zoom'],function($,template){
+	require(['jquery','template','cookie','fly','load','zoom'],function($,template){
 			const url = location.href;
 			const id = findId(url);
+			let curr_product = [];
 			$.getJSON('/mock/detail.json',function(data){
 				$.each(data.res_body.list,function(index,curr){
 					if(index == id){
+						curr_product = curr;
 						const html = template('detail_template',{list:curr});
 						$('.context').html(html);
 					}
 				})
-			});
-			$(function(){
-				//放大镜
-				console.log($('.zoom_img',$('.context')))
 				$('.zoom_img',$('.context')).elevateZoom({
 					gallery:'gallery',
 					cursor : 'pointer',
 					galleryActiveClass : 'active'
-				});
+				}); 
+				$('#addTocart').click(function(e){
+					const end = $('#cart').offset();
+					const src = $('.zoom_img').attr('src');
+					let product = [];
+					let flyer = $(`<img src='${src}' style='width:40px;'>`);
+					flyer.fly({
+						start:{
+							top:e.clientY,
+							left:e.clientX
+						},
+						end:{
+							top:end.top - $(window).scrollTop(),
+							left:end.left - $(window).scrollLeft()
+						},
+						onEnd:function(){
+							this.destroy();
+						}
+					});
+					$.cookie.json = true;
+					let prod = $.cookie('product');
+					
+					if(prod){
+						product = prod;						
+					}else{
+						product = [];						
+					}
+					product.push(curr_product);	
+					console.log(product);				
+					$.cookie('product',product,{expires:10,path:'/'});
+				})
 				//获取第二个楼层导航坐标
 				let upNav_position = $('.up_nav',$('.context')).position(),
 				//获取第二个楼层导航宽
 					upNav_width = $('.up_nav',$('.context')).width();
-				console.log($('.up_nav',$('.context'))+"+"+upNav_position+"+"+upNav_width)
 				/*触发滚动事件*/
 				$(window).scroll(function(e){
 					//获取滚动高度
@@ -76,6 +103,9 @@ require(['config'],function(){
 					}
 				})
 			});
+
+
+			});
 			
 			//从url上找id
 			function findId(url){
@@ -86,5 +116,5 @@ require(['config'],function(){
 			}
 			
 		});
-	})
+	
 

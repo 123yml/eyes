@@ -1,9 +1,12 @@
 require(['config'],function(){
 	require(['jquery','template','cookie','load'],function($,template,cookie){
+
 		$.getJSON('/mock/list.json',function(data){
 			const html = template("list_template",{list:data.res_body.list});
 			$('.images').html(html);
 		});
+
+
 		$(window).scroll(function(e){
 			//获取滚动高度
 			let scrollHeight = $(window).scrollTop();

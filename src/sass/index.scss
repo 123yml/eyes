@@ -1,3 +1,5 @@
+$width:1390px;
+
 .banner{
 	height:409px;
 	position:relative;
@@ -5,14 +7,14 @@
 	#images{ 
 		position: absolute;
 		height: 409px;
+		width: $width*5;
 		overflow: hidden;
 		li{
 			height: 409px;
 			float: left;
-			text-align: center;			
-		}
-		
-		
+			text-align: center;	
+
+		}				
 	}
 	#pointer{
 		height: 40px;
