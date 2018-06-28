@@ -10,24 +10,6 @@
 	box-shadow: 0px 2px 2px #cccccc;
 	background:#cccccc url('/img/login_bg/icon5.png') no-repeat 15px center;
 }
-.table{
-
-	width: 1064px;
-	margin:0 auto;
-	table{
-		width: 1064px;
-		cellpadding:1; 
-		cellspacing:1;
-		border:1px solid #dedede;
-		thead{			
-			background: #f8f8f8;
-			tr{
-				width: 1064px;
-				height: 38px;
-				td{
-					border:1px solid #dedede;
-				}
-			}
-		}
-	} 
+.input-group-addon{
+	cursor:pointer;
 }

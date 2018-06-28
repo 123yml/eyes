@@ -9,12 +9,14 @@
 </head>
 <body>
 	<header id="header"></header>
+	<div class = 'container'>
 	<div class='warning'> 
 		商品请在一周内提交订单，否则系统将其自动移出购物车。
 	</div>
+	
 	<div class="cart cart_empty hide">
 	    <h1>It appears that your cart is currently empty!</h1>
-	    <h2>You can continue browsing <a href="men.html">here</a>.</h2>
+	    <h2>You can continue browsing <a href="/html/list.html">here</a>.</h2>
     </div>
 	<div class="cart_not_empty hide row">
     	<table class="table table-bordered table-hover">
@@ -44,7 +46,7 @@
     		{{each products prod}}
     		<tr data-id="{{prod.id}}">
 				<td><input type="checkbox" class="ck_prod"></td>
-				<td><img src="{{prod.img}}"></td>
+				<td><img src="{{prod.img}}" width="80"></td>
 				<td>{{prod.title}}</td>
 				<td>{{prod.price}}</td>
 				<td>
@@ -60,7 +62,9 @@
 			{{/each}}
     	</script>
     </div>
+</div>
 	<footer id="footer"></footer>
+	
 	<script src="/lib/requirejs/require.js" data-main='/js/cart'></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 require(['config'],function(){
-	require(['jquery','load'],function($){
-		/*********************************************************/
+	require(['jquery','template','cookie','load'],function($,template){
+	/*********************************************************/
 	/* 读取并渲染购物车 */
 	/*********************************************************/
 	$.cookie.json = true;
@@ -16,6 +16,7 @@ require(['config'],function(){
 	$(".cart_not_empty").removeClass("hide");
 	// 渲染购物车模板
 	const html = template("cart_temp", {products});
+	console.log(products);
 	// 显示
 	$(".cart_not_empty table tbody").html(html);
 
