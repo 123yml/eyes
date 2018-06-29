@@ -116,14 +116,14 @@
 		{{each list product}}
 		<dl>
 			<dt>
-				<a href='/html/detail.html' title="{{product.desc}}">
+				<a href='/html/detail.html?id={{product.id}}' title="{{product.desc}}">
 					<img src='{{product.img}}' title="{{product.desc}}">
 					<span class="bg"></span>
 				</a>					
 			</dt>
 			<dd>
 				<p>
-					<a href='/html/detail.html'>{{product.desc}}</a>
+					<a href='/html/detail.html?id={{product.id}}'>{{product.desc}}</a>
 				</p>
 				<span>{{product.price}}</span><i>{{product.type}}</i><em>{{product.oldPrice}}</em>
 			</dd>

@@ -5,27 +5,7 @@ require(['config'],function(){
 			//找到网址传过来的id			
 			const id = findId(url);
 			$.cookie.json = true;
-			//定义当前产品
 			let curr_product = {};
-			let count = 0;
-			$.cookie("products")
-			const prod = $.cookie("products") || [];
-			console.log(prod)
-			//如果当前cookie没有保存有产品
-			if(prod.length == 0) {
-				count = 0;
-			}  else{//如果有产品
-				//遍历获取到的cookie值
-				for(let i in prod){
-					count += prod[i].amount;
-				}
-				// prod.each(function(index,curr){
-				// 	//计算购物车产品数量
-				// 	count += curr.amount;
-				// });
-			} 
-			//把数量放到页面上
-			$('#prod_counts').html(count);
 			//获取detail的json值			
 			$.getJSON('/mock/detail.json',function(data){
 				//遍历当前获取的json假数据
@@ -49,8 +29,7 @@ require(['config'],function(){
 				//放大镜
 				$('.zoom_img',$('.context')).elevateZoom({
 					gallery:'gallery',
-					cursor : 'pointer',
-					galleryActiveClass : 'active'
+					cursor : 'pointer'
 				}); 
 				//点击添加到购物车
 				$('#addTocart').click(function(e){
@@ -58,8 +37,9 @@ require(['config'],function(){
 					const end = $('#cart').offset();
 					//获取运动图片路径
 					const src = $('.zoom_img').attr('src');
+					curr_product.amount = parseInt($('#amount').val());
 					//设置抛物线运动图片
-					let flyer = $(`<img src='${src}' style='width:40px;'>`);
+					let flyer = $(`<img src='${src}' style='width:40px;position:absolute;'>`);
 					//抛物线运动
 					flyer.fly({
 						start:{
@@ -87,7 +67,7 @@ require(['config'],function(){
 							products.push(curr_product);												
 						}else{//如果有保存过
 							//当前产品的数量+1
-							products[index].amount++;						
+							products[index].amount += curr_product.amount;						
 						}
 					}else{//如果cookie中没有产品
 						//直接添加到数组中
@@ -110,7 +90,7 @@ require(['config'],function(){
 					//获取窗口宽度
 					const windowWidth = $(window).width(),
 						//获取第二个楼层导航出现的位置
-						up_showHeight = $('.buy_know').position();
+						up_showHeight = $('#buy_know').position();
 					//判断第一个楼层导航出现	
 					if(scrollHeight >= showHeight.top){
 						//固定第一个楼层导航位置
@@ -135,7 +115,7 @@ require(['config'],function(){
 						$('.up_nav').css({
 							position:'fixed',
 							top:0,
-							left:0,
+							left:(windowWidth-$('.up_nav').width())/2,
 							background:'white',
 							zIndex:999,
 						});

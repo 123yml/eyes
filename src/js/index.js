@@ -1,5 +1,5 @@
 require(['config'],function(){
-	require(['jquery','template','load'],function($,template){
+	require(['jquery','template','cookie','load'],function($,template){
 		$.getJSON("/mock/list.json",function(data){
 			const html_hot = template('list_template',{list:data.res_body.list});
 			$('.hot_list').html(html_hot);

@@ -1,5 +1,5 @@
 require(['config'],function(){
-	require(['jquery','load'],function($){
+	require(['jquery','cookie','load'],function($){
 		$(".container").height($(window).height());
 
 		//点击提交
@@ -12,7 +12,7 @@ require(['config'],function(){
 			$.post("http://localhost/php/login.php",$("#login_form").serialize(), function(data){
 				if (data.res_code === 1){					
 					if(data.res_body.password == password)
-						location = '/html/cart.html';
+						location = '/html/cart.html?username='+data.res_body.username;
 				}					
 				else
 					console.log("用户登录失败：" + data.res_message);

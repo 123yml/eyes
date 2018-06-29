@@ -58,7 +58,7 @@
 				<div class="count">
 					<span>数量</span>
 					<button>-</button>
-					<input type="text" value='1'>
+					<input type="text" value='1' id='amount'>
 					<button>+</button>
 					<span>(库存<i>{{list.stock}}</i>件)</span>
 				</div>
@@ -85,15 +85,15 @@
 	<div class="box">
 		<div class="up_nav">
 			<ul>
-				<li><i></i><span>购买须知</span></li>
-				<li><i></i><span>设计师寄语</span></li>
-				<li><i></i><span>商品图片</span></li>
-				<li><i></i><span>同款推荐</span></li>
-				<li><i></i><span>同店推荐</span></li>
+				<li><i></i><a href='#buy_know'>购买须知</a></li>
+				<li><i></i><a href='#designer_words'>设计师寄语</a></li>
+				<li><i></i><a href='#product_img'>商品图片</a></li>
+				<li><i></i><a href='#same_style'>同款推荐</a></li>
+				<li><i></i><a href='#same_shop'>同店推荐</a></li>
 			</ul>
 		</div>
 	</div>
-	<div class="buy_know">
+	<div id="buy_know">
 		<h2>购买须知<i>size</i></h2>
 		<p>【商品材质】：{{list.quality}}</p>
 		<p>【邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;费】{{list.postage}}</p>
@@ -103,19 +103,19 @@
 		<p>【编&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;语】：{{list.word}}</p>
 	</div>
 
-	<div class="designer_words">			
+	<div id="designer_words">			
 		<h2>设计师寄语 <i>MESSAGE</i></h2>				
 		<p>Maison Mai 黑色双面针织面料侧开衩时尚运动长裤出自于原创服装设计师品牌Maison Mai。设计师 Mia LI 信奉“技,艺,道”的修行阶梯。2009年就读巴黎高等服装裁剪学院ACADEMIE INTERNATIONAL DE COUPE DE PARIS专攻版型设计。2011 年毕业后进入 Christophe Lemaire （现Lemaire）担任版师工作2年。2013 年回国，进入 PORTS1961 担任技术设计师，负责高端系列的产品研发管理工作。2016 年，创立独立服装品牌 Maison Mai。设计师Mia LI 多年为高端品牌研发产品的经历，让 Maison Mai 在产品设计的创意思路和品质控制上有着更为优秀的表现。   Maison Mai 秉持独立，优雅，沉静，内敛的设计审美，坚持用立裁方法做结构设计，每一款单品都历经严谨的板型结构调整，不做多余繁复的设计，摒除一切过分张扬的元素。将设计与生活做连结，从穿着者的角度出发做设计，让每一个设计都兼具丰富的内涵和舒适的穿着体验。Maison Mai 希望能为那些关注当下文化与生活，不受外界嘈杂纷扰，独立、有追求、内心丰富而清净的女性提供更多的着装选择。</p>
 	</div>
 
-	<div class="product_img">	
+	<div id="product_img">	
 		<h2>商品图片  <i>PICTURE</i></h2>
 		{{each list.img images}}
 		<img src="{{images}}" alt="">
 		{{/each}}
 	</div> 
 	</script>
-	<div class="same_style">	
+	<div id="same_style">	
 		<h2>同款推荐  <i>THE SAME STYLE</i></h2>
 		<dl>
 			<dt>
@@ -178,7 +178,7 @@
 		</dl>
 	</div>
 
-	<div class="same_shop">	
+	<div id="same_shop">	
 		<h2>同店推荐  <i>THE SAME SHOP</i></h2>
 		<dl>
 				<dt>

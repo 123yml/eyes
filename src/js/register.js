@@ -1,5 +1,5 @@
 require(['config'],function(){
-	require(['jquery','load'],function($){
+	require(['jquery','cookie','load'],function($){
 		//动态设置背景宽度
 		$(".container").height($(window).height());
 

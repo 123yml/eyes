@@ -1,7 +1,22 @@
 //加载头部尾部
 define(['jquery'],function($){
 	$('#header').load('/html/include/header.html',function(){
-		
+		$('.search_txt .txt').on('keyup',function(){
+			let html = "";
+			let txt = $(this).val();
+			$.getJSON(`https://suggest.taobao.com/sug?code=utf-8&q=${txt}&callback=?`,function(data){
+				data.result.forEach(function(curr){
+					html += `<div>${curr[0]}</div>`
+				})
+				$(".suggest").show().html(html);
+			})
+		})
+		$(".suggest").delegate("div","click",function(){
+			const txt = $(this).text();
+			$(".search_txt .txt").val(txt);
+			$(".suggest").hide();
+		})
+
 		$('.s_cloth').on('click',function(){
 			$('.s_designer').css({background:'black',color:'white'});
 			$('.s_cloth').css({background:'white',color:'#444444'});
@@ -38,7 +53,52 @@ define(['jquery'],function($){
 
 			})
 		})
+		let username = '';
+		const url = location.href;
+		//找到网址传过来的username			
+		
+		if(findUsername(url)){
+			username = findUsername(url);
+		    $('.loginAndRegister>a').eq(0).html(username);
+		    $('.loginAndRegister>a').eq(0).attr({src:'#'});
+		    $('.loginAndRegister>a').eq(1).html('退出');
+		    $('.loginAndRegister>a').eq(1).attr({src:'/html/login.html'});
+		}
+		else{
+			$('.loginAndRegister>a').eq(0).html('注册');
+			$('.loginAndRegister>a').eq(0).attr({src:'/html/register.html'});
+			$('.loginAndRegister>a').eq(1).html('登录');
+		    $('.loginAndRegister>a').eq(1).attr({src:'/html/login.html'});
+		}
+		//定义当前产品
+		$.cookie.json = true;
+			let curr_product = {};
+			let count = 0;
+			$.cookie("products")
+			const prod = $.cookie("products") || [];
+			//如果当前cookie没有保存有产品
+			if(prod.length == 0) {
+				count = 0;
+			}  else{//如果有产品
+				//遍历获取到的cookie值
+				for(let i = 0; i < prod.length; i++){
+					count += prod[i].amount;
+				}
+			} 
+			//把数量放到页面上
+			
+			$('#prod_counts').text(count);
+			console.log($('#prod_counts').text())
+			//从url上找username
+			function findUsername(url){
+			let startId = url.indexOf("?");
 
+			url = url.slice(startId+1).split("=");
+			if(url[0] === 'username')
+				return url[1];
+			else
+				return false;
+		}
 	});
 	$('#footer').load('/html/include/footer.html');
 });
