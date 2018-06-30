@@ -13,3 +13,13 @@
 .input-group-addon{
 	cursor:pointer;
 }
+
+dl{
+	dt{
+		float: left;
+	}
+	dd{
+		padding-left: 10px;
+		float: left;
+	}
+}

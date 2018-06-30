@@ -18,6 +18,8 @@ require(['config'],function(){
 							img:curr.img[0],
 							title:curr.desc,
 							price:curr.price.slice(1),
+							size:curr.size,
+							color:curr.color,
 							amount:1
 						}
 						//用当前产品信息渲染详情页面模版
@@ -26,6 +28,25 @@ require(['config'],function(){
 						$('.context').html(html);
 					}
 				})
+
+				$('#reduce').click(function(){
+					let number = parseInt($(this).next().val());
+					number--;					
+					if(number<=1){
+						number = 1;
+					}
+					
+					$(this).next().val(number)
+				})
+				$('#add').on('click',function(){
+					let numner = parseInt($(this).prev().val());
+					numner++;
+					if(numner>=$('#stock').text())
+						numner = $('#stock').text();
+					$(this).prev().val(numner);
+				})
+
+
 				//放大镜
 				$('.zoom_img',$('.context')).elevateZoom({
 					gallery:'gallery',
@@ -52,7 +73,7 @@ require(['config'],function(){
 						},
 						onEnd:function(){
 							this.destroy();
-						}
+						} 
 					});
 					$.cookie.json = true;
 					//获取cookie中的产品信息
@@ -73,7 +94,15 @@ require(['config'],function(){
 						//直接添加到数组中
 						products.push(curr_product);	
 					}
-					
+					//初始化购物车数量
+					let prod_amount = 0;
+					//遍历产品
+					$.each(products,function(index,curr){
+						//计算数量
+						prod_amount += curr.amount;
+					})
+					//显示
+					$('#prod_counts').html(prod_amount);
 						//保存cookie				
 					$.cookie('products',products,{expires:10,path:'/'});
 				})
@@ -136,7 +165,7 @@ require(['config'],function(){
 			});
 
 
-			});
+			
 			
 			//从url上找id
 			function findId(url){
@@ -155,6 +184,9 @@ require(['config'],function(){
 				}
 				return -1;
 			}
+
+			
 		});
+});
 	
 

@@ -1,20 +1,26 @@
 require(['config'],function(){
 	require(['jquery','template','cookie','load'],function($,template){
-	/*	const url = location.href;
-		let username = '';
-		if(findUsername(url)){
-			username = findUsername(url);
-			$('a')
+		let url = location.href;
+		let username = findUsername(url)
+		if(username){
+			console.log(username)
+			
+			$('.loginAndRegister>a').eq(0).html(findUsername(url));
+		    $('.loginAndRegister>a').eq(0).attr({src:'#'});
+		    $('.loginAndRegister>a').eq(1).html('退出');
+		    $('.loginAndRegister>a').eq(1).attr({src:'/html/login.html'});
+		    $.cookie('username',username,{expires:10})
 		}
-		function findUsername(url){
-			let startId = url.indexOf("?");
 
-			url = url.slice(startId+1).split("=");
-			if(url[0] === 'username')
+		function findUsername(url){
+			url = url.slice(url.indexOf('?')+1);
+			if(url){
+				url = url.split('=');
 				return url[1];
-			else
-				return false;
-		}*/
+			}
+			return false;
+		}	
+			
 		/*********************************************************/
 		/* 读取并渲染购物车 */
 		/*********************************************************/

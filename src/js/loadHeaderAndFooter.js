@@ -20,16 +20,18 @@ define(['jquery'],function($){
 		$('.s_cloth').on('click',function(){
 			$('.s_designer').css({background:'black',color:'white'});
 			$('.s_cloth').css({background:'white',color:'#444444'});
-			$('.txt').val('搜美衣');
+			$('.txt').attr({placeholder:'搜美衣'});
 			$('.l_cloth').hide();
 			$('.l_designer').hide();
+			$('.txt').val('');
 		});
 		$('.s_designer').on('click',function(){
 			$('.s_designer').css({background:'white',color:'#444444'});
 			$('.s_cloth').css({background:'black',color:'white'})
-			$('.txt').val('搜设计师');
+			$('.txt').attr({placeholder:'搜设计师'});
 			$('.l_cloth').hide();
 			$('.l_designer').show();
+			$('.txt').val('');
 		});
 		$('.women').on('click',function(){
 			$('.women').css({color:'#ffd27e'});
@@ -53,23 +55,7 @@ define(['jquery'],function($){
 
 			})
 		})
-		let username = '';
-		const url = location.href;
-		//找到网址传过来的username			
-		
-		if(findUsername(url)){
-			username = findUsername(url);
-		    $('.loginAndRegister>a').eq(0).html(username);
-		    $('.loginAndRegister>a').eq(0).attr({src:'#'});
-		    $('.loginAndRegister>a').eq(1).html('退出');
-		    $('.loginAndRegister>a').eq(1).attr({src:'/html/login.html'});
-		}
-		else{
-			$('.loginAndRegister>a').eq(0).html('注册');
-			$('.loginAndRegister>a').eq(0).attr({src:'/html/register.html'});
-			$('.loginAndRegister>a').eq(1).html('登录');
-		    $('.loginAndRegister>a').eq(1).attr({src:'/html/login.html'});
-		}
+			
 		//定义当前产品
 		$.cookie.json = true;
 			let curr_product = {};
@@ -88,7 +74,6 @@ define(['jquery'],function($){
 			//把数量放到页面上
 			
 			$('#prod_counts').text(count);
-			console.log($('#prod_counts').text())
 			//从url上找username
 			function findUsername(url){
 			let startId = url.indexOf("?");
@@ -99,6 +84,28 @@ define(['jquery'],function($){
 			else
 				return false;
 		}
+
+		//读取username
+		let username = $.cookie('username');
+		if(username){
+			$('.loginAndRegister>a').eq(0).html(username);
+		    $('.loginAndRegister>a').eq(0).attr({src:'#'});
+		    $('.loginAndRegister>a').eq(1).html('退出');
+		    $('.loginAndRegister>a').eq(1).attr({src:'/html/login.html'});
+		}else{
+			$('.loginAndRegister>a').eq(0).html('注册');
+			$('.loginAndRegister>a').eq(0).attr({src:'/html/register.html'});
+			$('.loginAndRegister>a').eq(1).html('登录');
+		    $('.loginAndRegister>a').eq(1).attr({src:'/html/login.html'});
+		}
+
+		$('.loginAndRegister>a').eq(1).on('click',function(){
+			if($(this).html() === '退出'){
+				$.cookie('username',null);				
+			}
+			location = '/html/login.html';
+
+		})
 	});
 	$('#footer').load('/html/include/footer.html');
 });

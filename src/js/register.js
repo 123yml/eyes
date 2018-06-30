@@ -24,6 +24,7 @@ require(['config'],function(){
 		//手机验证
 		if($('#way1').prop('checked')){
 			//用户名失去焦点时验证
+			$('#warning').html('');
 			$('#username').blur(function(){	
 				//获取用户名文本框文本			
 				let username = $('#username').val();
@@ -34,46 +35,84 @@ require(['config'],function(){
 					//ajax请求后台数据，找用户名
 					$.post('http://localhost/php/login.php',$('#rgs_form').serialize(),function(data){
 						//如果有找到
-						if(data.res_code === 1)
-							$('#warning').html('用户名已被注册！');
-						else{//没找到
-							$('#warning').html('');
-							console.log('用户名可用');
-						}
-					})
+						// console.log(data)
+						if(data.res_code === 1){
+							$('#username').val('');
+							// $('#warning').html('用户名已被注册！');
+						}else{//没找到
+							$('#warning').html('');						}
+					},'json')
 				}else{//正则表达式验证未通过
 					//用户名文本框清空
 					$('#username').val('');
-					//用户名文本框边框颜色设置为红色
-					$('#username').css({borderColor:'red'});
-				}
-			})
-		}else if($('#way2').prop('checked')){//邮箱验证
-			$('#username').blur(function(){	//用户名失去焦点时验证
-				//获取用户名文本框文本			
-				let username = $('#username').val();
-				//邮箱验证正则表达式
-				const reg_email = /^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$/;
-				//正则表达式验证通过
-				if(reg_email.test(username)){
-					//ajax请求后台数据，找用户名
-					$.post('http://localhost/php/login.php',$('#rgs_form').serialize(),function(data){
-						//如果有找到
-						if(data.res_code === 1)
-							$('#warning').html('用户名已被注册！');
-						else{//没找到
-							$('#warning').html('');
-							console.log('用户名可用')
-						}
-					})
-				}else{//正则表达式验证未通过
-					//用户名文本框清空
-					$('#username').val('');
+					$('#username').attr({placeholder:'请输入正确的用户名！'})
+
 					//用户名文本框边框颜色设置为红色
 					$('#username').css({borderColor:'red'});
 				}
 			})
 		}
+
+		$('.register_way').on('click','input',function(){
+			if($(this).attr('id') === 'way1'){
+				$('#warning').html('');
+				$('#username').blur(function(){	
+					//获取用户名文本框文本			
+					let username = $('#username').val();
+						//手机验证正则表达式
+					const reg_phone = /^[1]\d{10}$/;
+					//正则表达式验证通过
+					if(reg_phone.test(username)){
+						//ajax请求后台数据，找用户名
+						$.post('http://localhost/php/login.php',$('#rgs_form').serialize(),function(data){
+							//如果有找到
+							// console.log(data)
+							if(data.res_code === 1){
+								$('#username').val('');
+								$('#username').attr({placeholder:'用户名已被注册！'})
+							}else{//没找到
+								$('#warning').html('');						}
+						},'json')
+					}else{//正则表达式验证未通过
+						//用户名文本框清空
+						$('#username').val('');
+						$('#username').attr({placeholder:'请输入正确的用户名！'})
+						//用户名文本框边框颜色设置为红色
+						$('#username').css({borderColor:'red'});
+					}
+				})
+			}else if($(this).attr('id') === 'way2'){
+				
+				$('#warning').html('');
+				$('#username').blur(function(){	//用户名失去焦点时验证
+					//获取用户名文本框文本			
+					let username = $('#username').val();
+					console.log(username)
+					//邮箱验证正则表达式
+					const reg_email = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+					//正则表达式验证通过
+					if(reg_email.test(username)){
+						//ajax请求后台数据，找用户名
+						console.log('aaa')
+						$.post('http://localhost/php/login.php',$('#rgs_form').serialize(),function(data){
+							//如果有找到
+							if(data.res_code === 1)
+								console.log('aaa')
+							else{//没找到
+								$('#warning').html('');
+							}
+						},'json')
+					}else{//正则表达式验证未通过
+						//用户名文本框清空
+						$('#username').val('');
+						$('#username').attr({placeholder:'请输入正确的电子邮箱！'})
+						//用户名文本框边框颜色设置为红色
+						$('#username').css({borderColor:'red'});
+					}
+					return;
+				})
+			}
+		})
 
 		$('#password').blur(function(){
 			const reg_password = /^[0-9a-zA-Z_]\w{7,15}$/;

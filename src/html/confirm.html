@@ -10,7 +10,18 @@
 <body>
 	<header id="header"></header>
 	<div class='address'>
-		
+		<h3>确认收货地址</h3>
+		<h4>请选择省市区</h4>
+		<select id="province">
+			
+		</select>
+		<select id="city">
+			<option>--请选择城市--</option>
+		</select>
+		<select id="area">
+			<option>--请选择区县--</option>
+		</select><br>
+		<textarea name="" id='textarea' placeholder="请填写具体的街道地址"></textarea>
 	</div>
 	<div class = 'container'>
 	<div class="cart cart_empty hide">
@@ -18,7 +29,7 @@
 	    <h2>You can continue browsing <a href="/html/list.html">here</a>.</h2>
     </div>
 	<div class="cart_not_empty hide row">
-    	<table class="table table-bordered table-hover" style='width:1084px;margin:0 auto;' >
+    	<table class="table table-bordered table-hover">
     		<thead>
     			<tr>
     				<th class="col-md-2">图片</th>
@@ -31,14 +42,11 @@
     		<tbody>
 
     		</tbody>
-    		<tfoot>
-    			<tr>
-    				<td>合计</td>
-    				<td colspan="6" class="total">0.00</td>
-    			</tr>
-    		</tfoot>
     	</table>
-    	<a class="btn btn-danger" href="confirm.html" style='float:right;margin-right: 60px;margin-top:30px;'>确认订单</a>
+    	<div class='tfoot'>
+    		<p>合计：<span class='tatal'>0.00</span></p>
+    	</div>
+    	<a class="btn btn-danger" href="confirm.html">确认订单</a>
     	<script type="text/html" id="cart_temp">
     		{{each products prod}}
     		<tr data-id="{{prod.id}}">

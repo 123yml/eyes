@@ -47,7 +47,17 @@
     		{{each products prod}}
     		<tr data-id="{{prod.id}}">
 				<td><input type="checkbox" class="ck_prod"></td>
-				<td><img src="{{prod.img}}" width="80"></td>
+				<td>
+					<dl>
+						<dt><img src="{{prod.img}}" width="80"></dt>
+						<dd>
+							<p>颜色：<span>{{prod.color}}</span></p>
+							<p>尺码：<span>{{prod.size}}</span></p>
+						</dd>
+					</dl>
+					
+					
+				</td>
 				<td>{{prod.title}}</td>
 				<td>{{prod.price}}</td>
 				<td>

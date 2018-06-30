@@ -10,7 +10,7 @@
 	
 	<!-- header -->
 	<header id="header"></header>
-	
+	 
 	<div class="context">
 		
 	</div>
@@ -57,10 +57,10 @@
 				</div>
 				<div class="count">
 					<span>数量</span>
-					<button>-</button>
+					<button id='reduce'>-</button>
 					<input type="text" value='1' id='amount'>
-					<button>+</button>
-					<span>(库存<i>{{list.stock}}</i>件)</span>
+					<button id='add'>+</button>
+					<span>(库存<i id='stock'>{{list.stock}}</i>件)</span>
 				</div>
 				<div class="add">
 					<a href="javascript:void(0)">立即购买</a>

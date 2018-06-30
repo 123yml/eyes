@@ -7,7 +7,7 @@ require.config({
 		template:"lib/artTemplate/template-web",
 		cookie : "lib/jquery-plugins/jquery.cookie",
 		bootstrap : "/lib/bootstrap/js/bootstrap.min",
-		fly : "/lib/jquery-plugins/jquery.fly.min"
+		fly : "lib/jquery-plugins/jquery.fly.min"
 	},
 	shim : {
 		zoom:{
@@ -17,4 +17,4 @@ require.config({
 			deps : ["jquery"]
 		}
 	}
-});
+}); 

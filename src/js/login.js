@@ -12,7 +12,8 @@ require(['config'],function(){
 			$.post("http://localhost/php/login.php",$("#login_form").serialize(), function(data){
 				if (data.res_code === 1){					
 					if(data.res_body.password == password)
-						location = '/html/cart.html?username='+data.res_body.username;
+						// $.cookie('username',username,{expires:10,path:'/'})
+						location = '/html/cart.html?username=' + username;
 				}					
 				else
 					console.log("用户登录失败：" + data.res_message);

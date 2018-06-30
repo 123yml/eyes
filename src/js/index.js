@@ -7,7 +7,7 @@ require(['config'],function(){
 			$('.discount_list').html(html_discount);
 		})
 
-		/*轮播图*/
+		/*轮播图*/ 
 		let lis = $('li'),
 			len = lis.length,
 			liWidth=lis[0].offsetWidth;
@@ -37,34 +37,34 @@ require(['config'],function(){
 		const pointer = $('span',$('#pointer'));
 
 		//移动
-			function move(){
-				var _left = -nextIndex*liWidth;
-				$("#images").animate({left:_left},200,function(){
-					if(nextIndex>=len){
-						$("#images").css({left:-liWidth});
-						currentIndex = 1;
-						nextIndex = 2;
-					}else if(nextIndex===1){
-						$("#images").css({left:-liWidth*(len-2)});
-						currentIndex = len - 2;
-						nextIndex = len - 1;
-					}
-				});
-				var index = nextIndex - 1;
-				if(index>=len-2){
-					index = 0;
+		function move(){
+			var _left = -nextIndex*liWidth;
+			$("#images").animate({left:_left},200,function(){
+				if(nextIndex>=len){
+					$("#images").css({left:-liWidth});
+					currentIndex = 1;
+					nextIndex = 2;
+				}else if(nextIndex===1){
+					$("#images").css({left:-liWidth*(len-2)});
+					currentIndex = len - 2;
+					nextIndex = len - 1;
 				}
-				else if(index<0){
-					index = 2;
-				}				
-				for(var i = 0; i <pointer.length; i++){
-					pointer[i].className = "";
-				}
-				
-				pointer[index].className = "current";
-				currentIndex = nextIndex;
-				nextIndex++;
+			});
+			var index = nextIndex - 1;
+			if(index>=len-2){
+				index = 0;
 			}
+			else if(index<0){
+				index = 2;
+			}				
+			for(var i = 0; i <pointer.length; i++){
+				pointer[i].className = "";
+			}
+			
+			pointer[index].className = "current";
+			currentIndex = nextIndex;
+			nextIndex++;
+		}
 			
 		var timer = setInterval(move,4000);
 		
