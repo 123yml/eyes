@@ -12,7 +12,7 @@
 	<header id="header"></header>
 	 
 	<div class="context">
-		
+		 
 	</div>
 	<script type='text/html' id="detail_template">
 	<div class="prod">
@@ -75,11 +75,8 @@
 					<div class="wechatAPP">
 						<img src="/img/index/wechatAPP.png">
 					</div>
-				</div>
-				
-			</div>
-
-			
+				</div>				
+			</div>			
 		</div>
 	</div>
 	<div class="box">
@@ -115,71 +112,49 @@
 		{{/each}}
 	</div> 
 	</script>
+	<script type='text/html' id='same_style_template'>
+		{{each pro_style product}}
+		<dl>
+			<dt>
+				<a href='/html/detail.html?id={{product.id}}' title="{{product.desc}}">
+					<img src='{{product.img}}' title="{{product.desc}}">
+					<span class="bg"></span>
+				</a>
+				
+			</dt>
+			<dd>
+				<p>
+					<a href='/html/detail.html?id={{product.id}}'>{{product.desc}}</a>
+				</p>
+				<span>{{product.price}}</span>
+			</dd>
+		</dl>
+		{{/each}}
+	</script>
 	<div id="same_style">	
-		<h2>同款推荐  <i>THE SAME STYLE</i></h2>
-		<dl>
-			<dt>
-				<a href='/html/detail.html' title="CHEN原创设计2018春夏新款圆领修身短袖碎花拼接百搭T恤">
-					<img src='/img/index/hot1.png' title="CHEN原创设计2018春夏新款圆领修身短袖碎花拼接百搭T恤">
-					<span class="bg"></span>
-				</a>					
-			</dt>
-			<dd>
-				<p>
-					<a href='/html/detail.html'>DEL CHEN原创设计2018春夏新款圆领修身短袖碎花拼接百搭T恤</a>
-				</p>
-				<span>￥449.10</span>
-			</dd>
-		</dl>
-		<dl>
-			<dt>
-				<a href='/html/detail.html' title="香云纱正反两穿外套 / 时尚混搭外套--两翻书">
-					<img src='/img/index/hot2.png' title="香云纱正反两穿外套 / 时尚混搭外套--两翻书">
-					<span class="bg"></span>
-				</a>
-				
-			</dt>
-			<dd>
-				<p>
-					<a href='/html/detail.html'>DEL 香云纱正反两穿外套 / 时尚混搭外套--两翻书</a>
-				</p>
-				<span>￥449.10</span>
-			</dd>
-		</dl>
-		<dl>
-			<dt>
-				<a href='/html/detail.html' title="沐艺制衣 设计师 透气拼接条纹撞色掉肩宽松男式短袖T恤  ">
-					<img src='/img/index/hot3.png' title="沐艺制衣 设计师 透气拼接条纹撞色掉肩宽松男式短袖T恤  ">
-					<span class="bg"></span>
-				</a>
-				
-			</dt>
-			<dd>
-				<p>
-					<a href='/html/detail.html'>DEL 沐艺制衣 设计师 透气拼接条纹撞色掉肩宽松男式短袖T恤  </a>
-				</p>
-				<span>￥449.10</span>
-			</dd>
-		</dl>
-		<dl>
-			<dt>
-				<a href='/html/detail.html' title="安妮陈女装纯色圆领短袖T恤 ">
-					<img src='/img/index/hot4.png' title="安妮陈女装纯色圆领短袖T恤 ">
-					<span class="bg"></span>
-				</a>
-				
-			</dt>
-			<dd>
-				<p>
-					<a href='/html/detail.html'>DEL 安妮陈女装纯色圆领短袖T恤  </a>	
-				</p>
-				<span>￥449.10</span>
-			</dd>
-		</dl>
+			
 	</div>
-
+	<script type='text/html' id='same_shop_template'>
+		{{each pro_shop product}}
+		<dl>
+			<dt>
+				<a href='/html/detail.html?id={{product.id}}' title="{{product.desc}}">
+					<img src='{{product.img}}' title="{{product.desc}}">
+					<span class="bg"></span>
+				</a>
+				
+			</dt>
+			<dd>
+				<p>
+					<a href='/html/detail.html?id={{product.id}}'>{{product.desc}}</a>
+				</p>
+				<span>{{product.price}}</span>
+			</dd>
+		</dl>
+		{{/each}}
+	</script>
 	<div id="same_shop">	
-		<h2>同店推荐  <i>THE SAME SHOP</i></h2>
+		
 		<dl>
 				<dt>
 					<a href='/html/detail.html' title="垂感假两件复式套头t恤  ">

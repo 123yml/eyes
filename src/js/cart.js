@@ -1,15 +1,11 @@
 require(['config'],function(){
 	require(['jquery','template','cookie','load'],function($,template){
+		$.cookie.json = true;
 		let url = location.href;
-		let username = findUsername(url)
+		let username = findUsername(url);
 		if(username){
-			console.log(username)
-			
-			$('.loginAndRegister>a').eq(0).html(findUsername(url));
-		    $('.loginAndRegister>a').eq(0).attr({src:'#'});
-		    $('.loginAndRegister>a').eq(1).html('退出');
-		    $('.loginAndRegister>a').eq(1).attr({src:'/html/login.html'});
-		    $.cookie('username',username,{expires:10})
+		    $.cookie('username',username,{expires:10,path:'/'})
+		    console.log($.cookie('username'))
 		}
 
 		function findUsername(url){
@@ -17,14 +13,14 @@ require(['config'],function(){
 			if(url){
 				url = url.split('=');
 				return url[1];
-			}
-			return false;
+			} 
+			return false; 
 		}	
 			
 		/*********************************************************/
 		/* 读取并渲染购物车 */
 		/*********************************************************/
-		$.cookie.json = true;
+		
 		// 读取购物车保存的 cookie
 		let products = $.cookie("products") || [];
 		// 判断是否有选购过商品

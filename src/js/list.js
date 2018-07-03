@@ -1,12 +1,12 @@
 require(['config'],function(){
-	require(['jquery','template','cookie','load'],function($,template,cookie){
+	require(['jquery','template','cookie','load'],function($,template){
 
 		$.getJSON('/mock/list.json',function(data){
 			const html = template("list_template",{list:data.res_body.list});
 			$('.images').html(html);
 		});
 
-
+ 
 		$(window).scroll(function(e){
 			//获取滚动高度
 			let scrollHeight = $(window).scrollTop();
@@ -16,7 +16,7 @@ require(['config'],function(){
 			const windowWidth = $(window).width();
 			//判断楼层导航出现	
 			if(scrollHeight >= showHeight.top){
-				//固定楼层导航位置
+				//固定楼层导航位置 
 				$('.bottom',$('#header')).css({
 					position:'fixed',
 					top:0,

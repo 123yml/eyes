@@ -58,53 +58,41 @@ define(['jquery'],function($){
 			
 		//定义当前产品
 		$.cookie.json = true;
-			let curr_product = {};
-			let count = 0;
-			$.cookie("products")
-			const prod = $.cookie("products") || [];
-			//如果当前cookie没有保存有产品
-			if(prod.length == 0) {
-				count = 0;
-			}  else{//如果有产品
-				//遍历获取到的cookie值
-				for(let i = 0; i < prod.length; i++){
-					count += prod[i].amount;
-				}
-			} 
-			//把数量放到页面上
-			
-			$('#prod_counts').text(count);
-			//从url上找username
-			function findUsername(url){
-			let startId = url.indexOf("?");
-
-			url = url.slice(startId+1).split("=");
-			if(url[0] === 'username')
-				return url[1];
-			else
-				return false;
-		}
-
+		let curr_product = {};
+		let count = 0;
+		const prod = $.cookie("products") || [];
+		//如果当前cookie没有保存有产品
+		if(prod.length == 0) {
+			count = 0;
+		}  else{//如果有产品
+			//遍历获取到的cookie值
+			for(let i = 0; i < prod.length; i++){
+				count += prod[i].amount;
+			}
+		} 
+		//把数量放到页面上			
+		$('#prod_counts').text(count);
+		
 		//读取username
 		let username = $.cookie('username');
+		console.log(username) 
 		if(username){
 			$('.loginAndRegister>a').eq(0).html(username);
-		    $('.loginAndRegister>a').eq(0).attr({src:'#'});
+		    $('.loginAndRegister>a').eq(0).attr({href:'#'});
 		    $('.loginAndRegister>a').eq(1).html('退出');
-		    $('.loginAndRegister>a').eq(1).attr({src:'/html/login.html'});
+		    $('.loginAndRegister>a').eq(1).attr({href:'/html/login.html'});
 		}else{
 			$('.loginAndRegister>a').eq(0).html('注册');
-			$('.loginAndRegister>a').eq(0).attr({src:'/html/register.html'});
+			$('.loginAndRegister>a').eq(0).attr({href:'/html/register.html'});
 			$('.loginAndRegister>a').eq(1).html('登录');
-		    $('.loginAndRegister>a').eq(1).attr({src:'/html/login.html'});
+		    $('.loginAndRegister>a').eq(1).attr({href:'/html/login.html'});
 		}
 
 		$('.loginAndRegister>a').eq(1).on('click',function(){
 			if($(this).html() === '退出'){
-				$.cookie('username',null);				
+				$.cookie('username',null,{path:'/'});				
 			}
 			location = '/html/login.html';
-
 		})
 	});
 	$('#footer').load('/html/include/footer.html');

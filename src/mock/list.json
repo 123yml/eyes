@@ -1,7 +1,7 @@
 {
 	"res_code":"",
 	"res_message":"",
-	"res_body":{
+	"res_body":{ 
 		"list":[
 			{"id":0,"img":"/img/list/a1.jpg","price":"￥3890.00","oldPrice":"￥5240.00","desc":"廓形风衣 ","type":"E0.09837"},
 			{"id":1,"img":"/img/list/d1.jpg","price":"￥1090.00","oldPrice":"￥1888.00","desc":"女士织带半裙","type":"E0.09837"},
@@ -13,4 +13,4 @@
 			{"id":7,"img":"/img/list/t1.jpg","price":"￥1190.00","oldPrice":"￥1999.00","desc":"【木境·格】圆领袖子采用扳网格装饰条开衫","type":"E0.09837"}
 		]
 	}
-}
+} 
